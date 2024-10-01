@@ -16,13 +16,14 @@ EXPORT_SCENE=export-scene.py
 
 DIST=../dist
 
-all : \
+all:\
 	$(DIST)/phone-bank.pnct \
 	$(DIST)/phone-bank.w \
 	$(DIST)/phone-bank.scene \
 
-$(DIST)/phone-bank.pnct : phone-bank.blend $(EXPORT_MESHES)
-	$(BLENDER) --background --python $(EXPORT_MESHES) -- '$<':Platforms '$@'
+/Applications/Blender.app/Contents/MacOS/blender --background --python export-meshes.py -- myscene.blend:Collection ../dist/myscene.pnct
+/Applications/Blender.app/Contents/MacOS/blender --background --python export-scene.py -- myscene.blend:Collection ../dist/myscene.scene
+/Applications/Blender.app/Contents/MacOS/blender --background --python export-walkmeshes.py -- myscene.blend:Walkmeshes ../dist/myscene.w
 
 $(DIST)/phone-bank.scene : phone-bank.blend $(EXPORT_SCENE)
 	$(BLENDER) --background --python $(EXPORT_SCENE) -- '$<':Platforms '$@'
