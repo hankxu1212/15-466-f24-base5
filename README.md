@@ -1,8 +1,8 @@
-# (TODO: your game's title)
+# Maze3D
 
-Author: (TODO: your name)
+Author: HANK XU
 
-Design: (TODO: In two sentences or fewer, describe what is new and interesting about your game.)
+Design: Traverse a maze and find the objective!
 
 Screen Shot:
 
@@ -10,9 +10,8 @@ Screen Shot:
 
 How To Play:
 
-(TODO: describe the controls and (if needed) goals/strategy.)
+WASD for control.
 
-Sources: (TODO: list a source URL for any assets you did not create yourself. Make sure you have a license for the asset.)
 
 This game was built with [NEST](NEST.md).
 
